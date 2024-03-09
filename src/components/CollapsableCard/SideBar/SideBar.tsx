@@ -1,5 +1,6 @@
 // import { usePermission } from '@hooks/usePermission';
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
 import { List, ListItem, ListItemIcon, ListItemText, SvgIcon } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useMatch, useNavigate } from 'react-router-dom';
@@ -25,6 +26,22 @@ function SideBar() {
                 <div className={classes.nameContainer}>
                     <ListItemText
                         primary={t('titles.overview')}
+                        primaryTypographyProps={{ className: classes.listItemText }}
+                    />
+                </div>
+            </ListItem>
+            <ListItem
+                className={`${classes.navLink} ${useMatch('/picture') && classes.navLinkActive}`}
+                component="span"
+                button
+                onClick={() => navigate('/picture')}
+            >
+                <ListItemIcon>
+                    <SvgIcon className={classes.listItemIcon} component={InsertPhotoIcon} viewBox="0 0 24 24" />
+                </ListItemIcon>
+                <div className={classes.nameContainer}>
+                    <ListItemText
+                        primary={t('titles.pictures')}
                         primaryTypographyProps={{ className: classes.listItemText }}
                     />
                 </div>

@@ -16,11 +16,11 @@ function Guard({ target, guards }: GuardT): React.ReactElement {
         switch (guards[i]) {
             case 'authenticated':
                 if (!user?.id) {
-                    redirectUrl = '/login';
                     break;
                 }
                 break;
             default:
+                redirectUrl = '/login';
                 break;
         }
     }

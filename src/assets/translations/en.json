@@ -535,7 +535,8 @@
     "reset-your-password": "Reset your password",
     "settings": "Settings",
     "teams": "My teams",
-    "your-programme": "Your programme"
+    "your-programme": "Your programme",
+    "pictures": "Pictures"
   },
   "validations": {
     "confirm-password-required": "Password required",

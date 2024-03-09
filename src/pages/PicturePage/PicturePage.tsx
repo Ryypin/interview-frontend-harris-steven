@@ -1,14 +1,14 @@
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 
-import useHomePageStyle from './HomePage.style';
+import usePicturePageStyle from './PicturePage.style';
 import SideBar from '../../components/CollapsableCard/SideBar/SideBar';
 import TopBar from '../../components/CollapsableCard/TopBar/TopBar';
 import { Fab } from '@mui/material';
 
-function HomePage() {
+function PicturePage() {
     const [sideBarOpen, setSidebarOpen] = useState(true);
-    const { classes } = useHomePageStyle({ sideBarOpen });
+    const { classes } = usePicturePageStyle({ sideBarOpen });
 
     const toggleSideBar = () => {
         setSidebarOpen((sideBarOpen) => !sideBarOpen);
@@ -38,4 +38,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default PicturePage;
